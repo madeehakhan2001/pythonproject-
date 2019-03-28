@@ -7,3 +7,6 @@
             
             
             make methods and then within buttons call them using command = (method)
+
+
+for color bg="color"
