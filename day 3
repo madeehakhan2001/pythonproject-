@@ -1,0 +1,136 @@
+from tkinter import *
+import tkinter as tk
+class Window (Frame):
+    def __init__(self, master= None):
+        Frame.__init__(self,master)
+        
+        self.master= master
+#    Command methods to implement for buttons 
+    def Try(self):
+        answ= input("WHY DID JOHN WINTHROP SAY THE PURITANS MUST BUILD A CITY UPON A HILL? a.In order to have a more defensible position in case of an attack by indigenous peoples. b. In order to build a lighthouse to help approaching ships navigate. c.In order to serve as a religious inspiration to others.")
+        if (answ== "c" or answ== "C"):
+            print ("good job that is correct")
+        else:
+            print ("incorrect, C is the right answer")
+            
+    def question1(self):
+        answ2= input("WHAT WAS PRESIDENT HARRY S. TRUMAN BEST KNOWN FOR? A. Under Presidency of Truman, the US engages in an internationalist foreign policy, a departure from its policy of isolationism, B. Because he asked congress for $400 million in military and economic assistance for Turkey and Greece, C. In his first months in office he dropped the atomic bomb on Japan, ending World War ")
+        if (answ2== "c" or answ2== "C"):
+            print ("good job that is correct")
+        else:
+            print ("incorrect, c is the right answer")
+            
+    def question2(self):
+        answ3= input("WHAT IMPACT DID THE TRANSCONTINENTAL RAILROAD HAVE ON NATIVE AMERICANS TRIBES OF THE GREAT PLAINS AND THE WEST? A. The railroad brought increased cultural and political pressure on the Native Americans, B. It allowed large numbers of Native Americans to resettle their homelands in the eastern United States, C. The railroad brought prosperity to Native Americans because the railroad companies paid high prices for their land and hired many Indians as laborers ")
+        if (answ3== "a" or answ3=="A"):
+            print ("good job that is correct")
+        else:
+            print ("incorrect, a is the right answer")
+    
+    def question3(self):
+        answ4= input("WHAT IMPACT DID RECONSTRUCTION HAVE ON THE LEGAL RIGHTS OF FREEDMEN LIVING IN THE POST-BELLUM SOUTH? A. Reconstruction had some benefits because it forced lazy freedmen to work, B. Reconstruction had few benefits because federal laws were poorly enforced, C. Reconstruction had many benefits because all slave owners were imprisoned")
+        if (answ4== "b" or answ4=="B"):
+            print ("good job that is correct")
+        else:
+            print ("incorrect, b is the right answer")
+    
+    def ques4(self):
+        answ5= input("WHEN HOLLYWOOD EMPLOYEES WERE ACCUSED OF COMMUNISM THEY... A)	Were forced to resign from any Hollywood job B)Were Blacklisted C)	They were rejected from taking any part in society")
+        if (answ5=="b" or answ5=="B"):
+            print("good job that is correct")
+        else:
+            print("incorrect, b is the right answer")
+    def ques5(slef):
+        answ6=input("BLEEADING KANSAS EARNED IT'S NAME OVER CLASHES ON WHAT ISSUE... A)the Dred Scott case B)religious differences C)slavery D)land ownership")
+        if (answ6=="c" or answ6=="C"):
+            print("good job that's correct")
+        else:
+            print("no, the correct answer was C")
+        
+    def ques6(self):
+        answ7=input("DURING 1860 T0 1861, SEVEN SOUTHERN STATES SECEDED FROM THE UNION TO PROTECT AGAINST THE-- ? A. brutal caning of Charles Sumner in the Senate, B. election of Republican, Abraham Lincoln, C. refusal of the federal government to punish John Brown for 'Bleeding Kansas' and 'Harpers Ferry'")
+        if(answ7=="b" or answ7=="B"):
+            print("good job that's correct")
+        else:
+            print("no, the correct answer was B")
+    
+    def ques7(self):
+        answ8=input("WHAT 1862 BATTLE KEPT THE BRITISH FROM RECOGNIZING AND SUPPORTING THE CONFEDERACY AND GAVE LINCOLN THE OPPURTUNITY TO ISSUE THE EMANCIPATION PROCLAMATION? A. Antietam or Sharpsburg, B. Manassas or Bull Run, C. Gettysburg")
+        if(answ8=="a" or answ8=="A"):
+            print("good job that's correct")
+        else:
+            print("no, the correct answer was A")
+            
+    def ques8(self):
+        answ9=input("WHEN FRANCIS SCOTT KEY, DURING THE WAR OF 1812, WROTE THE LYRICS FOR THE STAR SPANGLED BANNER, HE WAS DESCRIBING THE BOMBARDMENT OF WHAT IMPORTANT INSTALLATION? A. Fort Sumter, South Carolina, B. Fort Lee, Massachusetts, C. Fort McHenry, Maryland")
+        if (answ9=="c" or answ9=="C"):
+            print("good job that's correct")
+        else:
+            print("no, the correct answer in C")
+   
+     #Creation of popup init_window
+    def init_window(self):
+
+        # changing the title     
+        self.master.title("Jeopardy")
+
+        # allowing the widget to take the full space of the root window
+        self.pack(fill=BOTH, expand=1)
+
+        # creating a button instance
+        titlebutton = Button(self, text="Civil War/ Dev.", height=5, width=13, bg= "orange")
+        titlebutton.place(x=0, y=0)
+        
+        button1 = Button(self, text="500", height=5, width=13,bg="yellow", command= self.ques7)
+        # placing the button on my window
+        button1.place(x=0, y=100)
+        
+        button2 = Button(self, text="300", height=5, width=13, bg="yellow", command= self.ques6)
+        button2.place(x=0, y=200)
+        
+        button3 = Button(self, text="100", height=5, width=13, command= self.question2, bg="yellow")
+        button3.place(x=0, y=300)
+        
+        buttonbonus1 = Button(self, text="BONUS", height=5, width=13, command= self.ques5, bg="red")
+        buttonbonus1.place(x=0, y=400)
+        
+        titlebutton2 = Button(self, text="Random", height=5, width=13, bg= "orange")
+        titlebutton2.place(x=100, y=0)
+        
+        button4 = Button(self, text="500", height=5, width=13, bg="yellow", command= self.ques8)
+        button4.place(x=100, y=100)
+        
+        button5 = Button(self, text="300", height=5, width=13, command= self.Try, bg="yellow")
+        button5.place(x=100, y=200)
+        
+        button6 = Button(self, text="100", height=5, width=13, command= self.question3, bg="yellow")
+        button6.place(x=100, y=300)
+        
+        buttonbonus2 = Button(self, text="BONUS", height=5, width=13, command=self.ques4, bg="red")
+        buttonbonus2.place(x=100, y=400)
+        
+        titlebutton3 = Button(self, text="Presidency", height=5, width=13, bg= "orange")
+        titlebutton3.place(x=200, y=0) 
+        
+        button7 = Button(self, text="500", height=5, width=13, bg="yellow")
+        button7.place(x=200, y=100)
+        
+        button8 = Button(self, text="300", height=5, width=13, bg="yellow")
+        button8.place(x=200, y=200)
+        
+        button9 = Button(self, text="100", height=5, width=13, command= self.question1, bg="yellow")
+        button9.place(x=200, y=300)
+        
+        buttonbonus3 = Button(self, text="BONUS", height=5, width=13, bg="red")
+        buttonbonus3.place(x=200, y=400)
+        
+    
+        
+root = Tk()
+#size of the window
+root.geometry("350x500")
+app= Window(root)
+app.init_window()
+
+
+root.mainloop()
